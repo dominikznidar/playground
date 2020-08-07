@@ -110,7 +110,7 @@
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const asyncApiUrl = urlParams.get('load') || urlParams.get('url');
+    const asyncApiUrl = urlParams.get('load') || urlParams.get('url') || "{{ defaultURL }}";
 
     if (asyncApiUrl) {
       document.getElementById('fetch-document-url').value = asyncApiUrl;
